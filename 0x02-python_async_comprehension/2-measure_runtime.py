@@ -7,7 +7,7 @@ This module contains a coroutine to measure the total runtime
 import asyncio
 import time
 from typing import List
-async_generator = __import__('0-async_generator').async_generator
+async_generator = __import__('1-async_comprehension').async_comprehension
 
 
 async def measure_runtime() -> float:
