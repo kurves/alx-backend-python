@@ -1,13 +1,14 @@
 #!/usr/bin/env python3
 """
 Module measure_runtime
-This module contains a coroutine to measure the total runtime of executing async_comprehension four times in parallel.
+This module contains a coroutine to measure the total runtime
 """
 
 import asyncio
 import time
 from typing import List
 async_generator = __import__('0-async_generator').async_generator
+
 
 async def measure_runtime() -> float:
     """
