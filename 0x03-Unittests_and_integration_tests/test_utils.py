@@ -63,5 +63,21 @@ class TestGetJson(unittest.TestCase):
         mock_get.assert_called_once_with(test_url)
 
 
+class TestMemoize(unittest.TestCase):
+    """ Test class for memoize decorator """
+
+    def test_memoize(self):
+        """ Test memoize decorator with a mock """
+
+        test_obj = TestClass()
+
+        with patch.object(TestClass, 'a_method', return_value=42) as mock_method:
+            first_call = test_obj.a_property
+            second_call = test_obj.a_property
+
+            self.assertEqual(first_call, 42)
+            self.assertEqual(second_call, 42)
+
+            mock_method.assert_called_once()
 if __name__ == "__main__":
     unittest.main()
